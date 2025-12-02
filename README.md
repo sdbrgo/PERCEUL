@@ -41,6 +41,6 @@ When building upon or reusing this work, please include:
 
 Example acknowledgment:
 
-> “This work builds on *PERCEUL: Framework and Prototype for Perception and Cognitive Ergonomics Using Unsupervised Learning* by Jasper Gomez (MIT Licensed).”
+> “This work builds on *PERCEUL: A Framework and Prototype for Unsupervised Profiling of Perception and Cognitive Ergonomics in the Workplace* by Jasper Gomez (MIT Licensed).”
 
 Following these guidelines helps support academic and ethical reuse.
