@@ -11,7 +11,9 @@ PERCEUL aims to bridge ergonomics and AI, with the project using Unsupervised Le
 
 ## 📂 Contents
 - PERCEUL.ipynb
-- 
+- README.md
+- LICENSE
+- CITATION.cff
 
 --- 
 ## 📄 License
