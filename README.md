@@ -10,6 +10,9 @@ PERCEUL aims to bridge ergonomics and AI, with the project using Unsupervised Le
 ---
 
 ## 📂 Contents
+- pipelines
+  - core_pipeline.pkl
+  - exploration_pipeline.pkl
 - PERCEUL.ipynb
 - README.md
 - LICENSE
