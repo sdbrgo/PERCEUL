@@ -4,8 +4,8 @@ message: "If you use this framework, prototype, or any part of this repository, 
 authors:
   - family-names: Gomez
     given-names: Jasper
-version: "0.3.0"
+version: "0.4.0"
 doi: ""
 date-released: 2025-12-02
-url: "https://github.com/sdbrgo/perceul"
+url: "https://github.com/jasper-gomez/perceul"
 license: "MIT"

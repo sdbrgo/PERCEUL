@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perceul"
+version = "0.4.0"
+description = "A framework for unsupervised profiling of perception and cognitive-environmental ergonomics in the workplace."
+readme = "README.md"
+authors = [
+    { name = "Jasper Gomez", email = "gomezjasper123@gmail.com" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+]
+requires-python = ">=3.10"
+
+dependencies = [
+    "gradio>=6.20.0",
+    "hdbscan>=0.8.42",
+    "joblib>=1.5.0",
+    "matplotlib>=3.11.0",
+    "numpy>=2.5.0",
+    "pandas>=3.0.0",
+    "scikit-learn>=1.9.0",
+    "umap-learn>=0.5.10"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.package-data]
+"perceul.assets" = ["*.pkl"]
+
+[project.urls]
+Homepage = "https://github.com/jasper-gomez/perceul"

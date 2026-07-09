@@ -1,8 +1,8 @@
 import gradio as gr
 
-from perceul.numeric_selector import NumericSelector
-from perceul.clustering import explore_clusters, final_clustering
-from perceul.interpretation import get_pca_loadings
+from src.perceul.selectors import NumericSelector
+from src.perceul.clustering import explore_clusters, final_clustering
+from src.perceul.interpretation import get_pca_loadings
 
 #========== GRADIO INTERFACE ==========
 with gr.Blocks(title="PERCEUL: Perception-Based Worker Profiler") as app:

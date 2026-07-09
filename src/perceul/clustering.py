@@ -1,16 +1,12 @@
-import pandas as pd 
-import numpy as np 
+import pandas as pd
 import matplotlib.pyplot as plt
-import joblib 
-import traceback 
+import joblib
+from importlib import resources
 
-from .cluster_utils import *
-from .interpretation import get_pca_loadings
-from .auxiliary import choose_umap_params, build_umap, build_hdbscan, format_outliers, format_deviations_as_columns
+from .utils.cluster import *
+from .utils.auxiliary import build_umap, build_hdbscan, format_outliers, format_deviations_as_columns
 
-from umap import UMAP
-from sklearn.cluster import KMeans 
-import hdbscan
+from sklearn.cluster import KMeans
 
 __all__ = [
     "explore_clusters",
@@ -22,7 +18,11 @@ __all__ = [
 # ============================================================
 def explore_clusters(file: str):
     df = pd.read_csv(file)
-    exploration_pipeline = joblib.load("artifacts/pipelines/exploration_pipeline.pkl")
+    
+    pkg_resource = resources.files("perceul.assets").joinpath("exploration_pipeline.pkl")
+    
+    with pkg_resource.open("rb") as f:
+        exploration_pipeline = joblib.load(f)
 
     X_exp = exploration_pipeline.fit_transform(df)
 
@@ -84,11 +84,15 @@ def final_clustering(file: str, top_features: int) -> tuple:
         * feature_names (list): List of feature names corresponding to the original data.
     """
     df = pd.read_csv(file)
-    core_pipeline = joblib.load("artifacts/pipelines/core_pipeline.pkl")
+    
+    pkg_resource = resources.files("perceul.assets").joinpath("core_pipeline.pkl")
+    
+    with pkg_resource.open("rb") as f:
+        core_pipeline = joblib.load(f)
 
     X_pca = core_pipeline.fit_transform(df)
 
-    best_k = choose_k(X_pca)                                                # choose_k() is from cluster_utils; dynamic `k` selection
+    best_k = choose_k(X_pca)                                                # choose_k() is from utils.cluster; dynamic `k` selection
 
     kmeans = KMeans(
         n_clusters=best_k,
