@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "perceul"
-version = "0.4.0"
+version = "0.5.0"
 description = "A framework for unsupervised profiling of perception and cognitive-environmental ergonomics in the workplace."
 readme = "README.md"
 authors = [
@@ -20,13 +20,13 @@ requires-python = ">=3.10"
 
 dependencies = [
     "gradio>=6.20.0",
-    "hdbscan>=0.8.42",
-    "joblib>=1.5.0",
-    "matplotlib>=3.11.0",
-    "numpy>=2.5.0",
-    "pandas>=3.0.0",
-    "scikit-learn>=1.9.0",
-    "umap-learn>=0.5.10"
+    "hdbscan>=0.8",
+    "joblib>=1.5",
+    "matplotlib>=3.11",
+    "numpy>=1.26",
+    "pandas>=3.0",
+    "scikit-learn>=1.9",
+    "umap-learn>=0.5"
 ]
 
 [tool.setuptools]

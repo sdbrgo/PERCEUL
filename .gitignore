@@ -6,3 +6,9 @@ __pycache__/
 *.xlxs
 
 artifacts/
+
+*.txt
+
+dist/
+
+perceul.egg-info/

@@ -14,7 +14,7 @@ def get_pca_loadings(pca: PCA, feature_names: list) -> pd.DataFrame:
         feature_names (list): List of feature names corresponding to the original data
 
     Returns:
-        pd.DataFrame: DataFrame with PCA loadings for each component and feature
+        loadings (pd.DataFrame): DataFrame with PCA loadings for each component and feature
     """
     loadings = pd.DataFrame(
         pca.components_.T,                                          # transposes the get features as rows and components as columns
@@ -26,3 +26,6 @@ def get_pca_loadings(pca: PCA, feature_names: list) -> pd.DataFrame:
     loadings = loadings.reset_index().rename(columns={'index': 'Feature'})
 
     return loadings
+
+# For version 0.6.0, add a function to manually map indexes/row of the original dataset to the clusters of either the exploration or final clustering.
+# This is useful to know which workers belong to which cluster, especially for the final clustering where the number of clusters is determined dynamically.

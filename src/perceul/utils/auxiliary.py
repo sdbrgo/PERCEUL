@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-import umap as UMAP
+from umap import UMAP
 import hdbscan
 
 def choose_umap_params(n_samples, n_features): # created to emphasize local structure of data
@@ -60,21 +60,16 @@ def format_deviations_as_columns(drivers: dict) -> str:
     Returns:
         str: A markdown table with clusters as columns and feature deviations as rows.
     """
-    headers = []
-    cells = []
+    lines = []
 
-    for cid, data in drivers.items():
-        headers.append(f"Cluster {cid}")
+    for cid, data in sorted(drivers.items()):
+        lines.append(f"Cluster {cid}")
 
-        dev_lines = [
-            f"{feature}: {value:.3f}"
-            for feature, value in data["deviations"].items()
-        ]
+        for feature, value in data["deviations"].items():
+            lines.append(f"    {feature}: {value:.3f}")
 
-        cells.append("<br>".join(dev_lines))
+        lines.append("")
 
-    table = "| " + " | ".join(headers) + " |\n"
-    table += "|" + "|".join(["---"] * len(headers)) + "|\n"
-    table += "| " + " | ".join(cells) + " |"
+    table = "\n".join(lines).strip()
 
     return table
