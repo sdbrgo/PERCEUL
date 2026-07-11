@@ -1,6 +1,8 @@
 # PERCEUL
 A Framework and Prototype for Unsupervised Profiling of Perception and Cognitive Ergonomics in the Workplace
 
+![PERCEUL]()
+
 ---
 
 ## 📌 Overview

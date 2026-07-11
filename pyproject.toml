@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "perceul"
-version = "0.5.0"
+version = "0.5.1"
 description = "A framework for unsupervised profiling of perception and cognitive-environmental ergonomics in the workplace."
 readme = "README.md"
 authors = [
