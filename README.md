@@ -1,7 +1,7 @@
 # PERCEUL
 A Framework and Prototype for Unsupervised Profiling of Perception and Cognitive Ergonomics in the Workplace
 
-![PERCEUL]()
+![PERCEUL](https://github.com/jasper-gomez/perceul/raw/refactor/package/perceul.png)
 
 ---
 
