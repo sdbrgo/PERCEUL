@@ -1,7 +1,7 @@
 # PERCEUL
 A Framework and Prototype for Unsupervised Profiling of Perception and Cognitive Ergonomics in the Workplace
 
-![PERCEUL](https://github.com/jasper-gomez/perceul/raw/refactor/package/perceul.png)
+<img src="https://github.com/jasper-gomez/perceul/raw/refactor/package/perceul.png" width="200px" alt="PERCEUL">
 
 ---
 
@@ -25,7 +25,7 @@ data_path = "your_data.csv"
 # 2. Execute the pipeline
 # This automatically strips non-numeric features, handles missing values, 
 # scales your data, projects it via PCA, and performs clustering after selecting the optial number of clusters.
-# It returns a figure (matplotlib), optimal number of clusters (k), deviations in markdown, 
+# It returns a dictionary containing a figure (matplotlib), optimal number of clusters (k), deviations in markdown, 
 # the PCA model, and all features within the dataset.
 results = final_clustering(data_path, top_features=5)
 
